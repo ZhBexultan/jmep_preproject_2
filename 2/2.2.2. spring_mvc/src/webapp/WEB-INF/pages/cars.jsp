@@ -1,10 +1,10 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title><fmt:message key="locale.title"/></title>
-</head>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+    <html>
+    <head>
+        <title><fmt:message key="locale.title"/></title>
+    </head>
 <body>
     <ul>
         <li><a href="?lang=en"><fmt:message key="locale.lang.en"/></a></li>
