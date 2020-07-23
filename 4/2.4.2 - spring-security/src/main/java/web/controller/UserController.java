@@ -1,15 +1,24 @@
 package web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import web.model.Role;
 import web.model.User;
 import web.service.RoleService;
 import web.service.UserService;
 
-import java.util.*;
+import java.security.Principal;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Controller
@@ -18,6 +27,9 @@ public class UserController {
 	private final UserService userService;
 
 	private final RoleService roleService;
+
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 
 	@Autowired
 	public UserController(UserService userService, RoleService roleService) {
@@ -41,7 +53,8 @@ public class UserController {
     }
 
 	@GetMapping("/user")
-	public String getUserById(ModelMap map) {
+	public String getUserById(@AuthenticationPrincipal Principal user, ModelMap map) {
+		map.addAttribute("user", user);
 		return "user";
 	}
 
@@ -61,25 +74,21 @@ public class UserController {
 	}
 
 	@PostMapping("/admin/user")
-	public String addUser(@RequestParam String username,
-						  @RequestParam String password,
-						  @RequestParam Long[] role_id,
-						  @RequestParam String firstName,
-						  @RequestParam String lastName){
-		Set<Role> roles = Arrays.stream(role_id).map(roleService::getRoleById).collect(Collectors.toSet());
-		userService.addUser(new User(username, password, firstName, lastName, roles));
+	public String addUser(@ModelAttribute User user,
+						  @RequestParam Set<Long> roles_id){
+		Set<Role> roles = roles_id.stream().map(roleService::getRoleById).collect(Collectors.toSet());
+		user.setRoles(roles);
+		user.setPassword(passwordEncoder.encode(user.getPassword()));
+		userService.addUser(user);
 		return "redirect:/admin";
 	}
 
 	@PostMapping("/admin/updateUser")
-	public String editUser(@RequestParam Long id,
-						   @RequestParam String username,
-						   @RequestParam String password,
-						   @RequestParam Long[] role_id,
-						   @RequestParam String firstName,
-						   @RequestParam String lastName) {
-		Set<Role> roles = Arrays.stream(role_id).map(roleService::getRoleById).collect(Collectors.toSet());
-		userService.updateUser(new User(id, username, password, firstName, lastName, roles));
+	public String editUser(@ModelAttribute User user,
+						   @RequestParam Set<Long> roles_id) {
+		Set<Role> roles = roles_id.stream().map(roleService::getRoleById).collect(Collectors.toSet());
+		user.setRoles(roles);
+		userService.updateUser(user);
 		return "redirect:/admin";
 	}
 

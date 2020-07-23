@@ -1,59 +1,55 @@
 package web.dao;
 
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import web.model.User;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
-@Transactional
+@Transactional(readOnly = true)
 public class UserDaoImp implements UserDao {
 
-    private final SessionFactory sessionFactory;
-
-    @Autowired
-    public UserDaoImp(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
+    @PersistenceContext
+    private EntityManager entityManager;
 
     @Override
+    @Transactional
     public void addUser(User user) {
-        sessionFactory.getCurrentSession().save(user);
+        entityManager.persist(user);
     }
 
     @Override
     public User getUserById(Long id) {
-        TypedQuery<User> query =sessionFactory.getCurrentSession().createQuery("FROM User WHERE id = :id");
+        TypedQuery<User> query = entityManager.createQuery("SELECT u FROM User u WHERE id = :id", User.class);
         query.setParameter("id", id);
         return query.getResultList().stream().findFirst().orElse(null);
     }
 
     @Override
     public User getUserByUsername(String username) {
-        TypedQuery<User> query =sessionFactory.getCurrentSession().createQuery("FROM User WHERE username = :username");
+        TypedQuery<User> query = entityManager.createQuery("SELECT u FROM User u WHERE username = :username", User.class);
         query.setParameter("username", username);
         return query.getResultList().stream().findFirst().orElse(null);
     }
 
     @Override
+    @Transactional
     public void updateUser(User user) {
-        sessionFactory.getCurrentSession().update(user);
+        entityManager.merge(user);
     }
 
     @Override
+    @Transactional
     public void deleteUserById(Long id) {
-        TypedQuery<User> query = sessionFactory.getCurrentSession().createQuery("DELETE FROM User WHERE id = :id");
-        query.setParameter("id", id);
-        query.executeUpdate();
+        entityManager.remove(getUserById(id));
     }
 
     @Override
     public List<User> getAllUsers() {
-        TypedQuery<User> query = sessionFactory.getCurrentSession().createQuery("FROM User");
-        return query.getResultList();
+        return entityManager.createQuery("SELECT u FROM User u", User.class).getResultList();
     }
 }

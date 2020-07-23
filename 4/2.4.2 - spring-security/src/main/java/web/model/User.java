@@ -138,5 +138,8 @@ public class User implements UserDetails {
         this.roles = roles;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
 

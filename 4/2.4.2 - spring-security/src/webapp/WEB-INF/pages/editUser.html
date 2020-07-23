@@ -13,9 +13,9 @@
     First Name: <input type="text" name="firstName" th:value="${user.firstName}" required> <br>
     Last Name: <input type="text" name="lastName" th:value="${user.lastName}" required> <br>
     Role:
-    <input type="checkbox" id="1" name="role_id" value="1" >
+    <input type="checkbox" id="1" name="roles_id" value="1" >
     <label for="1">Admin</label>
-    <input type="checkbox" id="2" name="role_id" value="2"  >
+    <input type="checkbox" id="2" name="roles_id" value="2"  >
     <label for="2">User</label>
     <input type="submit" value="Update">
 </form>
@@ -23,3 +23,4 @@
 <a th:href="@{/logout}">Log Out</a>
 </body>
 </html>
+

@@ -1,29 +1,28 @@
 package web.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import web.dao.RoleDao;
 import web.dao.UserDao;
 import web.model.User;
 
 import java.util.List;
 
 @Service
-public class UserServiceImp implements UserService {
+public class UserServiceImp implements UserService, UserDetailsService {
 
     private final UserDao userDao;
 
-    private final RoleDao roleDao;
-
     @Autowired
-    public UserServiceImp(UserDao userDao, RoleDao roleDao) {
+    public UserServiceImp(UserDao userDao) {
         this.userDao = userDao;
-        this.roleDao = roleDao;
     }
 
     @Override
-    public User findByUsername(String username) {
-        return userDao.getUserByUsername(username);
+    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+        return userDao.getUserByUsername(s);
     }
 
     @Override
