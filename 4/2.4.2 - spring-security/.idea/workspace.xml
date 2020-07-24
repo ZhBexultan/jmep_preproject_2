@@ -65,55 +65,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bcf4a9b-edb2-42da-a5bc-8f1971c569fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/spring_security_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/spring_security_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/spring_security_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/config/DbConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/config/DbConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/dao/RoleDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/dao/RoleDaoImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/dao/UserDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/dao/UserDaoImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserDetailsServiceImp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/service/UserServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/editUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/editUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_Security/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_Security/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/config/DbConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/config/DbConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/dao/RoleDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/dao/RoleDaoImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/dao/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/dao/UserDaoImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/service/RoleServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/service/RoleServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/service/UserDetailsServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/service/UserServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/classes/web/service/UserServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/lib/spring-tx-5.2.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/pages/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/pages/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/pages/editUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/pages/editUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/pages/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring_Security/WEB-INF/pages/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/config/DbConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/config/DbConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/dao/RoleDaoImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/dao/RoleDaoImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/dao/UserDaoImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/dao/UserDaoImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/service/UserDetailsServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/service/UserServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/service/UserServiceImp.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,54 +258,54 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="51" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1536.824@0.0.1536.824" timestamp="1595404254770" />
-    <state width="1445" height="644" key="GridCell.Tab.0.bottom" timestamp="1595540798084">
+    <state width="1445" height="644" key="GridCell.Tab.0.bottom" timestamp="1595574589913">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="644" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595540798084" />
-    <state width="1445" height="644" key="GridCell.Tab.0.center" timestamp="1595540798084">
+    <state width="1445" height="644" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595574589913" />
+    <state width="1445" height="644" key="GridCell.Tab.0.center" timestamp="1595574589913">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="644" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595540798084" />
-    <state width="1445" height="644" key="GridCell.Tab.0.left" timestamp="1595540798084">
+    <state width="1445" height="644" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595574589913" />
+    <state width="1445" height="644" key="GridCell.Tab.0.left" timestamp="1595574589913">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="644" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595540798084" />
-    <state width="1445" height="644" key="GridCell.Tab.0.right" timestamp="1595540798084">
+    <state width="1445" height="644" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595574589913" />
+    <state width="1445" height="644" key="GridCell.Tab.0.right" timestamp="1595574589913">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="644" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595540798084" />
-    <state width="1445" height="644" key="GridCell.Tab.1.bottom" timestamp="1595540798084">
+    <state width="1445" height="644" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595574589913" />
+    <state width="1445" height="644" key="GridCell.Tab.1.bottom" timestamp="1595574589393">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="644" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595540798084" />
-    <state width="1445" height="644" key="GridCell.Tab.1.center" timestamp="1595540798084">
+    <state width="1445" height="644" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595574589393" />
+    <state width="1445" height="644" key="GridCell.Tab.1.center" timestamp="1595574589393">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="644" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595540798084" />
-    <state width="1445" height="644" key="GridCell.Tab.1.left" timestamp="1595540798084">
+    <state width="1445" height="644" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595574589393" />
+    <state width="1445" height="644" key="GridCell.Tab.1.left" timestamp="1595574589393">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="644" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595540798084" />
-    <state width="1445" height="644" key="GridCell.Tab.1.right" timestamp="1595540798084">
+    <state width="1445" height="644" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595574589393" />
+    <state width="1445" height="644" key="GridCell.Tab.1.right" timestamp="1595574589393">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="644" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595540798084" />
-    <state width="1445" height="644" key="GridCell.Tab.2.bottom" timestamp="1595540798084">
+    <state width="1445" height="644" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595574589393" />
+    <state width="1445" height="644" key="GridCell.Tab.2.bottom" timestamp="1595574589393">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="644" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595540798084" />
-    <state width="1445" height="644" key="GridCell.Tab.2.center" timestamp="1595540798084">
+    <state width="1445" height="644" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595574589393" />
+    <state width="1445" height="644" key="GridCell.Tab.2.center" timestamp="1595574589393">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="644" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1595540798084" />
-    <state width="1445" height="644" key="GridCell.Tab.2.left" timestamp="1595540798084">
+    <state width="1445" height="644" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1595574589393" />
+    <state width="1445" height="644" key="GridCell.Tab.2.left" timestamp="1595574589393">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="644" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1595540798084" />
-    <state width="1445" height="644" key="GridCell.Tab.2.right" timestamp="1595540798084">
+    <state width="1445" height="644" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1595574589393" />
+    <state width="1445" height="644" key="GridCell.Tab.2.right" timestamp="1595574589393">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="644" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1595540798084" />
+    <state width="1445" height="644" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1595574589393" />
     <state width="1445" height="246" key="GridCell.Tab.3.bottom" timestamp="1595536697183">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -372,6 +326,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595535320708" />
+    <state x="209" y="32" key="new project wizard" timestamp="1595543714332">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="32" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1595543714332" />
     <state x="425" y="66" width="670" height="676" key="search.everywhere.popup" timestamp="1595446852953">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
