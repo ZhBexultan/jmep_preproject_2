@@ -7,6 +7,7 @@ import web.model.Role;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import java.util.List;
 
 @Repository
 public class RoleDaoImp implements RoleDao {
@@ -20,6 +21,11 @@ public class RoleDaoImp implements RoleDao {
         TypedQuery<Role> query = entityManager.createQuery("SELECT r FROM Role r WHERE id = :id", Role.class);
         query.setParameter("id", id);
         return query.getResultList().stream().findFirst().orElse(null);
+    }
+
+    @Override
+    public List<Role> getAllRoles() {
+        return entityManager.createQuery("SELECT r FROM Role r", Role.class).getResultList();
     }
 
 }

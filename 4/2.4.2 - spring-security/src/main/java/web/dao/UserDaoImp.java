@@ -8,6 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Repository
 @Transactional(readOnly = true)
@@ -24,14 +25,14 @@ public class UserDaoImp implements UserDao {
 
     @Override
     public User getUserById(Long id) {
-        TypedQuery<User> query = entityManager.createQuery("SELECT u FROM User u WHERE id = :id", User.class);
+        TypedQuery<User> query = entityManager.createQuery("SELECT u FROM User u INNER JOIN FETCH u.roles r WHERE u.id = :id", User.class);
         query.setParameter("id", id);
         return query.getResultList().stream().findFirst().orElse(null);
     }
 
     @Override
     public User getUserByUsername(String username) {
-        TypedQuery<User> query = entityManager.createQuery("SELECT u FROM User u JOIN FETCH u.roles r WHERE u.username = :username", User.class);
+        TypedQuery<User> query = entityManager.createQuery("SELECT u FROM User u INNER JOIN FETCH u.roles r WHERE u.username = :username", User.class);
         query.setParameter("username", username);
         return query.getResultList().stream().findFirst().orElse(null);
     }
@@ -50,6 +51,6 @@ public class UserDaoImp implements UserDao {
 
     @Override
     public List<User> getAllUsers() {
-        return entityManager.createQuery("SELECT u FROM User u", User.class).getResultList();
+        return entityManager.createQuery("SELECT DISTINCT u FROM User u INNER JOIN FETCH u.roles r", User.class).getResultList();
     }
 }

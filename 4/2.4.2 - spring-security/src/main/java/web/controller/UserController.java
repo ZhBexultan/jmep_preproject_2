@@ -37,16 +37,6 @@ public class UserController {
 		this.roleService = roleService;
 	}
 
-	@GetMapping("/hello")
-	public String printWelcome(ModelMap model) {
-		List<String> messages = new ArrayList<>();
-		messages.add("Hello!");
-		messages.add("I'm Spring MVC-SECURITY application");
-		messages.add("5.2.0 version by sep'19 ");
-		model.addAttribute("messages", messages);
-		return "hello";
-	}
-
 	@GetMapping("/login")
     public String loginPage() {
         return "login";
@@ -61,6 +51,8 @@ public class UserController {
 	@GetMapping({"/", "/admin"})
 	public String getUsers(ModelMap map) {
 		List<User> users = userService.getAllUsers();
+		List<Role> roles = roleService.getAllRoles();
+		map.addAttribute("roles", roles);
 		map.addAttribute("users", users);
 		return "admin";
 	}
@@ -69,6 +61,10 @@ public class UserController {
 	public String getUserByIdUpdate(@PathVariable Long id,
 							  ModelMap map) {
 		User user = userService.getUserById(id);
+		List<Role> roles = roleService.getAllRoles();
+		List<Long> uroles = (List<Long>) user.getRoles().stream().map(Role::getId).collect(Collectors.toList());
+		map.addAttribute("uroles", uroles);
+		map.addAttribute("roles", roles);
 		map.addAttribute("user", user);
 		return "editUser";
 	}
@@ -88,6 +84,11 @@ public class UserController {
 						   @RequestParam Set<Long> roles_id) {
 		Set<Role> roles = roles_id.stream().map(roleService::getRoleById).collect(Collectors.toSet());
 		user.setRoles(roles);
+		String userPassword = userService.getUserById(user.getId()).getPassword();
+		if (!(userPassword.equals(user.getPassword()) ||
+				userPassword.equals(passwordEncoder.encode(user.getPassword())))) {
+			user.setPassword(passwordEncoder.encode(user.getPassword()));
+		}
 		userService.updateUser(user);
 		return "redirect:/admin";
 	}

@@ -1,6 +1,13 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="spring-security:war exploded">
-    <output-path>$PROJECT_DIR$/classes/artifacts/spring_security_war_exploded</output-path>
+    <output-path>$PROJECT_DIR$/target/Spring_Security</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>spring-security</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -23,6 +30,7 @@
           <element id="library" level="project" name="Maven: org.unbescape:unbescape:1.1.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.2.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:2.3.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:2.3.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.9.5" />
@@ -49,8 +57,10 @@
           <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.6.1" />
           <element id="library" level="project" name="Maven: org.springframework:spring-orm:5.2.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.2.7.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:2.3.2.RELEASE" />
         </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/Spring_Security/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="spring-security/web/Web" />
     </root>
